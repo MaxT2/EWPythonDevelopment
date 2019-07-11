@@ -10,7 +10,7 @@ class RainDrop(pygame.sprite.Sprite):
         # setup random numbers
         self.x_speed = 0
         # set random drop speed
-        self.y_speed = random.randint(12, 30)
+        self.y_speed = random.randint(12, 16)
         # store screen width
         self.display_width = screen_width
         # pygame image stuff
@@ -19,7 +19,7 @@ class RainDrop(pygame.sprite.Sprite):
         self.image.fill((99, 211, 255))
         # set bounding box and position
         self.rect = self.image.get_rect()
-        self.rect.center = (random.randint(0, self.display_width), random.randint(-100,-50))
+        self.rect.center = (random.randint(0, self.display_width), random.randint(-1000, -100))
 
     def update(self):
         self.rect.x += self.x_speed
